@@ -140,14 +140,14 @@ const consentButton = document.getElementById('consent-button');
 
 // Funktion zum Anzeigen des Zustimmungs-Overlays
 function showConsent() {
-    if (!localStorage.getItem('consentGiven')) {
+    if (!localStorage.getItem('NASAAPIPicturesconsentGiven')) {
         consentOverlay.classList.add('show');
     }
 }
 
 // Event Listener für den Zustimmungs-Button
 consentButton.addEventListener('click', () => {
-    localStorage.setItem('consentGiven', 'true');
+    localStorage.setItem('NASAAPIPicturesconsentGiven', 'true');
     consentOverlay.classList.remove('show');
 });
 
